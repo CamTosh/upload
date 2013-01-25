@@ -8,14 +8,12 @@
 
 <?
 if (isset($_POST['submit'])) {
-	// pre($_FILES);
-	$fu = new Upload($_FILES['file']);
-	// pre($fu);
-	if (!$fu->isError()) {
-		$fu->load();
+	$up = new Upload($_FILES['file']);
+	if (!$up->isError()) {
+		$up->load();
 	} else {
-		print $fu->getErrors(true);
+		print $up->getErrors(true);
 	}
-	pre($fu);
+	pre($up);
 }
 ?>
