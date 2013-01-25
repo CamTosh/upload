@@ -78,7 +78,7 @@ class Upload
     public function load() {
         $srcfile = $this->file['tmp_name'];
         $dstfile = $this->file['path'];
-        // Try upload
+        // Try move
         if (!@move_uploaded_file($srcfile, $dstfile)) {
             // Try copy
             if (!@copy($srcfile, $dstfile)) {
