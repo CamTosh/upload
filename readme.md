@@ -1,5 +1,3 @@
-Simply upload files.
-
 ```html
 <form method="post" action="" enctype="multipart/form-data">
 	File: <input type="file" name="file">
